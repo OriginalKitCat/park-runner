@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Data="*res://global/data.gd"
 SceneTransitonController="*res://transition/scene_transiton_controller.gd"
+DeathFadinFadout="*res://death_fadin_fadout.tscn"
 
 [display]
 

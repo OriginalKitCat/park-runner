@@ -11,6 +11,8 @@ var version = "7.8.4"
 var next_level = 0
 var undergroundpos
 var travel_with_underground
-
+var deathfade_begin = false
+var deathfade_end = false
+var playermovement = true
 func setvalue(value: int):
 	coins_data = value

@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://1i8oqg4hmjyg"]
+
+[sub_resource type="GDScript" id="GDScript_4k3cf"]
+script/source = "extends Node2D
+
+var target_scene : String
+var pixel_size : float = 1.0
+var may_pixel_size : float = 100.0
+
+func _process(delta: float) -> void:
+	if pixel_size < may_pixel_size:
+		pixel_size += 5 * delta
+		$CanvasLayer/ColorRect.material.set_shader_param(\"pixel_size\", pixel_size)
+		$CanvasLayer/ColorRect.rect_scale = Vector2(1, 1)
+	if pixel_size >= may_pixel_size:
+		get_tree().change_scene_to_file(target_scene)
+
+func start_transition(scene: String):
+	target_scene = scene
+	pixel_size = 1
+"
+
+[sub_resource type="Shader" id="Shader_66xu7"]
+code = "shader_type canvas_item;
+
+uniform int pixel_size : hint_range(1, 100);
+uniform vec2 screen_size; 
+
+void fragment() {
+    vec2 uv = FRAGCOORD.xy / screen_size;
+    vec2 pixel_pos = floor(uv * float(pixel_size)) / float(pixel_size);
+    vec4 color = texture(TEXTURE, pixel_pos);
+    COLOR = color;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bo5cs"]
+shader = SubResource("Shader_66xu7")
+shader_parameter/pixel_size = 0
+shader_parameter/screen_size = Vector2(0, 0)
+
+[node name="Pixel_Transition" type="Node2D"]
+script = SubResource("GDScript_4k3cf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_bo5cs")
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)

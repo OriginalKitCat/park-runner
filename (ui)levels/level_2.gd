@@ -3,6 +3,11 @@ extends Node2D
 var lives
 @onready var levelalreadycollectedcoins = Data.coins_data
 
+func _ready() -> void:
+	$TransitionController.transition("Fade in", 1)
+	await  $TransitionController.animation_player.animation_finished
+
+	
 func _physics_process(_delta: float) -> void:
 	lives = Data.lives_data
 	$CanvasLayer/coin_panal/Label.text = str(Data.coins_data)

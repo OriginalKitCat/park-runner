@@ -11,4 +11,7 @@ script = ExtResource("1_sdten")
 [node name="DeathCollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_sdten")
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

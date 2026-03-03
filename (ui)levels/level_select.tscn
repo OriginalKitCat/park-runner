@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bbq51vocfpe71"]
+[gd_scene load_steps=10 format=4 uid="uid://bbq51vocfpe71"]
 
 [ext_resource type="Script" uid="uid://ca65xi4rjqge" path="res://(ui)levels/level_select.gd" id="1_1iyaf"]
 [ext_resource type="PackedScene" uid="uid://bqpot1xpmj7ye" path="res://parallax_bakground.tscn" id="2_1wnlg"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://b5p8ip8jo47wf" path="res://fonts/karma-future-font/KarmaFuture.ttf" id="5_hhsoe"]
 [ext_resource type="FontFile" uid="uid://dk3rtw1w3qmkh" path="res://fonts/hardpixel/Hardpixel.OTF" id="6_rtb5x"]
 [ext_resource type="PackedScene" uid="uid://d325f5i0nuqbl" path="res://coin_panal.tscn" id="7_vnx2f"]
+[ext_resource type="PackedScene" uid="uid://dsroj45u57wiq" path="res://transition_controller.tscn" id="8_rkv5f"]
 
 [sub_resource type="FontVariation" id="FontVariation_reu5o"]
 
@@ -97,6 +98,8 @@ offset_left = 84.0
 offset_top = 559.0
 offset_right = 44.0
 offset_bottom = 519.0
+
+[node name="TransitionController" parent="." instance=ExtResource("8_rkv5f")]
 
 [connection signal="button_down" from="Control/tutorial" to="." method="_on_play_button_button_down"]
 [connection signal="button_down" from="Control/level1" to="." method="_on_select_level_button_button_down"]
