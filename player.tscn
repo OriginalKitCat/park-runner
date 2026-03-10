@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dv7pepqhg23i6"]
+[gd_scene load_steps=10 format=3 uid="uid://dv7pepqhg23i6"]
 
 [ext_resource type="Script" uid="uid://bfqfe7xsfe4mu" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Script" uid="uid://csu4wuv21qh4n" path="res://camera_2d.gd" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://b2rrde6v6abna" path="res://images/player_waiting.PNG" id="4_hqtel"]
+[ext_resource type="PackedScene" uid="uid://blqmrowsgw03y" path="res://background_music.tscn" id="4_sweqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
 size = Vector2(21, 5)
@@ -75,5 +76,7 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="BackgroundMusic" parent="." instance=ExtResource("4_sweqy")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

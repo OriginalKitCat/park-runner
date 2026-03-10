@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blqmrowsgw03y"]
+
+[ext_resource type="AudioStream" uid="uid://bu4g8pmvx31ok" path="res://music/jimgor33-arcade-room-145860.mp3" id="1_4m5bw"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_4m5bw")
+volume_db = -0.305
+autoplay = true

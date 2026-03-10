@@ -32,3 +32,11 @@ func _on_change_caracter_button_down() -> void:
 	$TransitionController.transition("Fade out", 1)
 	await  $TransitionController.animation_player.animation_finished
 	get_tree().change_scene_to_file(next_scene)
+
+func _on_level_3_button_down() -> void:
+	Data.lives_data = 3
+	var next_scene = "res://(ui)levels/level3.tscn"
+	$TransitionController.animation_player.play("Fade out")
+	$TransitionController.transition("Fade out", 1)
+	await  $TransitionController.animation_player.animation_finished
+	get_tree().change_scene_to_file(next_scene)

@@ -18,7 +18,8 @@ func _ready() -> void:
 func  _physics_process(delta: float) -> void:
 	Data.current_payer_pos = global_position
 	if Data.was_killed == true:
-		Data.deathfade_begin = true;
+		if Data.lives_data >= 0 && global_position != Data.save_location:
+			Data.deathfade_begin = true;
 		timer = Timer.new()
 		add_child(timer)
 		timer.wait_time = 0.6

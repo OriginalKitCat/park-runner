@@ -14,5 +14,10 @@ var travel_with_underground
 var deathfade_begin = false
 var deathfade_end = false
 var playermovement = true
+var lastfadout = false
+var lastfadein = false
+var labeltext = '''gotta try
+harder next time'''
+var max_coins_earnd_in =  [0, 0 , 0]
 func setvalue(value: int):
 	coins_data = value

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bshmowlempr00"]
+[gd_scene load_steps=10 format=4 uid="uid://bshmowlempr00"]
 
 [ext_resource type="Script" uid="uid://bweb56xo71oog" path="res://(ui)levels/start_screen.gd" id="1_reu5o"]
 [ext_resource type="PackedScene" uid="uid://bqpot1xpmj7ye" path="res://parallax_bakground.tscn" id="1_td5ce"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://b5p8ip8jo47wf" path="res://fonts/karma-future-font/KarmaFuture.ttf" id="4_xo84u"]
 [ext_resource type="FontFile" uid="uid://dk3rtw1w3qmkh" path="res://fonts/hardpixel/Hardpixel.OTF" id="6_0vpym"]
 [ext_resource type="PackedScene" uid="uid://d325f5i0nuqbl" path="res://coin_panal.tscn" id="6_7xjm0"]
+[ext_resource type="PackedScene" uid="uid://bvu3wetgf6bnm" path="res://lastfadein.tscn" id="8_7xcpg"]
 
 [sub_resource type="FontVariation" id="FontVariation_reu5o"]
 
@@ -97,6 +98,10 @@ offset_left = 84.0
 offset_top = 559.0
 offset_right = 44.0
 offset_bottom = 519.0
+
+[node name="death_fadin_fadout" parent="Control" instance=ExtResource("8_7xcpg")]
+visible = false
+layout_mode = 0
 
 [connection signal="button_down" from="Control/Play_button" to="." method="_on_play_button_button_down"]
 [connection signal="button_down" from="Control/select_level_button" to="." method="_on_select_level_button_button_down"]
