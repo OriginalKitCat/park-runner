@@ -2,7 +2,7 @@ extends Camera2D
 
 @onready var player = $".."
 
-var target_zoom = Vector2(2,  2)
+var target_zoom = Vector2(2.5,  2.5)
 var zoom_speed = 2.0
 
 func _process(delta: float) -> void:

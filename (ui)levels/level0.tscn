@@ -150,6 +150,10 @@ texture = ExtResource("4_57t8h")
 position = Vector2(1545, 304)
 texture = ExtResource("4_57t8h")
 
+[node name="Sprite2D26" type="Sprite2D" parent="."]
+position = Vector2(1618, 304)
+texture = ExtResource("4_57t8h")
+
 [node name="Sprite2D13" type="Sprite2D" parent="."]
 position = Vector2(1640, 304)
 texture = ExtResource("4_57t8h")
@@ -207,7 +211,7 @@ position = Vector2(1054, 288)
 texture = ExtResource("5_no4c2")
 
 [node name="Sprite2D14" type="Sprite2D" parent="."]
-position = Vector2(1615, 289)
+position = Vector2(1258, 289)
 texture = ExtResource("5_no4c2")
 
 [node name="Sprite2D17" type="Sprite2D" parent="."]
@@ -216,9 +220,9 @@ texture = ExtResource("5_no4c2")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 39.0
-offset_top = 174.0
+offset_top = 211.0
 offset_right = 240.0
-offset_bottom = 252.0
+offset_bottom = 289.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
@@ -229,9 +233,9 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 298.0
-offset_top = 174.0
+offset_top = 211.0
 offset_right = 499.0
-offset_bottom = 252.0
+offset_bottom = 289.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
@@ -242,9 +246,9 @@ horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 551.0
-offset_top = 174.0
+offset_top = 211.0
 offset_right = 752.0
-offset_bottom = 252.0
+offset_bottom = 289.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
@@ -255,9 +259,9 @@ horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="."]
 offset_left = 823.0
-offset_top = 173.0
+offset_top = 210.0
 offset_right = 1024.0
-offset_bottom = 251.0
+offset_bottom = 288.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
@@ -267,9 +271,9 @@ horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="."]
 offset_left = 1125.0
-offset_top = 173.0
+offset_top = 210.0
 offset_right = 1326.0
-offset_bottom = 251.0
+offset_bottom = 288.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
@@ -279,9 +283,9 @@ horizontal_alignment = 1
 
 [node name="Label6" type="Label" parent="."]
 offset_left = 1337.0
-offset_top = 173.0
+offset_top = 210.0
 offset_right = 1708.0
-offset_bottom = 251.0
+offset_bottom = 288.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
@@ -292,9 +296,9 @@ horizontal_alignment = 1
 
 [node name="Label7" type="Label" parent="."]
 offset_left = 1679.0
-offset_top = 202.0
+offset_top = 239.0
 offset_right = 2050.0
-offset_bottom = 280.0
+offset_bottom = 317.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
@@ -304,22 +308,22 @@ horizontal_alignment = 1
 
 [node name="Label8" type="Label" parent="."]
 offset_left = 2058.0
-offset_top = 52.0
+offset_top = 89.0
 offset_right = 2429.0
-offset_bottom = 130.0
+offset_bottom = 167.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
-text = "Leaf blowers
-blow away
-sus :/"
+text = "Why does nobody
+ like you here?
+):"
 horizontal_alignment = 1
 
 [node name="Label9" type="Label" parent="."]
 offset_left = 2391.0
-offset_top = 133.0
+offset_top = 170.0
 offset_right = 2762.0
-offset_bottom = 211.0
+offset_bottom = 248.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5fe57")
 theme_override_font_sizes/font_size = 20
@@ -394,50 +398,4 @@ position = Vector2(1869, 319)
 
 [node name="Timer" type="Timer" parent="."]
 
-[connection signal="body_entered" from="grass_tiles/DeathZone" to="grass_tiles/DeathZone" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62122" to="grass_tiles/@Area2D@62122" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62123" to="grass_tiles/@Area2D@62123" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62124" to="grass_tiles/@Area2D@62124" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62125" to="grass_tiles/@Area2D@62125" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62126" to="grass_tiles/@Area2D@62126" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62127" to="grass_tiles/@Area2D@62127" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62128" to="grass_tiles/@Area2D@62128" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62129" to="grass_tiles/@Area2D@62129" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62130" to="grass_tiles/@Area2D@62130" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62131" to="grass_tiles/@Area2D@62131" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62132" to="grass_tiles/@Area2D@62132" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62133" to="grass_tiles/@Area2D@62133" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62134" to="grass_tiles/@Area2D@62134" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62135" to="grass_tiles/@Area2D@62135" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62136" to="grass_tiles/@Area2D@62136" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62137" to="grass_tiles/@Area2D@62137" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62138" to="grass_tiles/@Area2D@62138" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62139" to="grass_tiles/@Area2D@62139" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62140" to="grass_tiles/@Area2D@62140" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62141" to="grass_tiles/@Area2D@62141" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62142" to="grass_tiles/@Area2D@62142" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62143" to="grass_tiles/@Area2D@62143" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62144" to="grass_tiles/@Area2D@62144" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62145" to="grass_tiles/@Area2D@62145" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62146" to="grass_tiles/@Area2D@62146" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62147" to="grass_tiles/@Area2D@62147" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62148" to="grass_tiles/@Area2D@62148" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62149" to="grass_tiles/@Area2D@62149" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62150" to="grass_tiles/@Area2D@62150" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62151" to="grass_tiles/@Area2D@62151" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62152" to="grass_tiles/@Area2D@62152" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62153" to="grass_tiles/@Area2D@62153" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62154" to="grass_tiles/@Area2D@62154" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62155" to="grass_tiles/@Area2D@62155" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62156" to="grass_tiles/@Area2D@62156" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62157" to="grass_tiles/@Area2D@62157" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62158" to="grass_tiles/@Area2D@62158" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62159" to="grass_tiles/@Area2D@62159" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62160" to="grass_tiles/@Area2D@62160" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62161" to="grass_tiles/@Area2D@62161" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62162" to="grass_tiles/@Area2D@62162" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62163" to="grass_tiles/@Area2D@62163" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62164" to="grass_tiles/@Area2D@62164" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62165" to="grass_tiles/@Area2D@62165" method="_on_body_entered"]
-[connection signal="body_entered" from="grass_tiles/@Area2D@62166" to="grass_tiles/@Area2D@62166" method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

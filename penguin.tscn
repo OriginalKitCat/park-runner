@@ -1,0 +1,99 @@
+[gd_scene load_steps=15 format=3 uid="uid://bd5v4e6snuuc4"]
+
+[ext_resource type="Script" uid="uid://b6lfggpgjdb2b" path="res://penguin.gd" id="1_8i7jt"]
+[ext_resource type="Texture2D" uid="uid://by8ypf3hs1jr2" path="res://images/Penguin-other/Unbenanntes_Projekt 1.png" id="2_wyjm5"]
+[ext_resource type="Texture2D" uid="uid://bhuhcyvksdhmy" path="res://images/Penguin-other/Unbenanntes_Projekt.png" id="3_4p3dg"]
+[ext_resource type="Texture2D" uid="uid://dyg11rigxf74d" path="res://images/Penguin-fly/Unbenanntes_Projekt-1.png" id="4_bl3vp"]
+[ext_resource type="Texture2D" uid="uid://buw6a8xchc6ok" path="res://images/Penguin-fly/Unbenanntes_Projekt-2.png" id="5_nqv4f"]
+[ext_resource type="Texture2D" uid="uid://dkwq3shfep6l0" path="res://images/Penguin-fly/Unbenanntes_Projekt-3.png" id="6_vpsc8"]
+[ext_resource type="Texture2D" uid="uid://bp5b5sfi4ljpu" path="res://images/Penguin-fly/Unbenanntes_Projekt-4.png" id="7_eoxp1"]
+[ext_resource type="Texture2D" uid="uid://b284l3n6y64aj" path="res://images/Penguin-fly/Unbenanntes_Projekt-5.png" id="8_8qn5e"]
+[ext_resource type="Texture2D" uid="uid://crg5u215t3bdg" path="res://images/Penguin-stand/Unbenanntes_Projekt-1.png" id="9_4cfed"]
+[ext_resource type="Texture2D" uid="uid://b4mxiib5ssmep" path="res://images/Penguin-stand/Unbenanntes_Projekt-2.png" id="10_04ntn"]
+[ext_resource type="Texture2D" uid="uid://clnlcnqngrqtq" path="res://images/Penguin-stand/Unbenanntes_Projekt-3.png" id="11_yxfg1"]
+[ext_resource type="PackedScene" uid="uid://ek7cm632k2ej" path="res://death_zone.tscn" id="12_wyjm5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_glsa6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wyjm5")
+}],
+"loop": true,
+"name": &"FALL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4p3dg")
+}],
+"loop": true,
+"name": &"FALLEN",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bl3vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nqv4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vpsc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eoxp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8qn5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eoxp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vpsc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nqv4f")
+}],
+"loop": true,
+"name": &"FLYING",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("9_4cfed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_04ntn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yxfg1")
+}],
+"loop": true,
+"name": &"STANDING",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vf4ee"]
+size = Vector2(25, 58)
+
+[node name="Penguin" type="CharacterBody2D"]
+scale = Vector2(0.65807605, 0.75293195)
+script = ExtResource("1_8i7jt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_glsa6")
+animation = &"STANDING"
+frame_progress = 0.35655883
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_vf4ee")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="DeathZone" parent="." instance=ExtResource("12_wyjm5")]
+scale = Vector2(1, 2.0093875)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
