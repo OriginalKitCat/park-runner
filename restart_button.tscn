@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=4 uid="uid://e2kxghl5s0ls"]
+
+[ext_resource type="PackedScene" uid="uid://c1bkiqsyhlggi" path="res://ui_bakground.tscn" id="1_vpy71"]
+[ext_resource type="Texture2D" uid="uid://cb0qv53565krn" path="res://images/coin_icon.PNG" id="2_5uvvj"]
+
+[sub_resource type="FontVariation" id="FontVariation_37he8"]
+
+[node name="coin_panal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1066.0
+offset_bottom = -620.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_vpy71")]
+tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAD//wAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAABAAAAAAABAAIAAAACAAAAAAACAAIAAAACAP//AAACAAAAAAA=")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("2_5uvvj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -22.0
+offset_right = 85.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_37he8")
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
