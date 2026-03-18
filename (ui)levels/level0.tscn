@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bqtlf303cs6qf"]
+[gd_scene load_steps=31 format=4 uid="uid://bqtlf303cs6qf"]
 
 [ext_resource type="Script" uid="uid://b60kxnvo2c5c7" path="res://(ui)levels/level0.gd" id="1_vqwgl"]
 [ext_resource type="PackedScene" uid="uid://bqpot1xpmj7ye" path="res://parallax_bakground.tscn" id="2_jie2m"]
@@ -21,7 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://b2ew5v8bebpoh" path="res://livepanel.tscn" id="16_hl77w"]
 [ext_resource type="PackedScene" uid="uid://tuv01yrwll4k" path="res://bird_emeny.tscn" id="17_yuq3p"]
 [ext_resource type="PackedScene" uid="uid://b0ip2cxhix3m1" path="res://leaf_blower.tscn" id="18_nntbj"]
+[ext_resource type="PackedScene" uid="uid://c5lg8i5wpujpj" path="res://restart_menu.tscn" id="19_iiuyr"]
 [ext_resource type="PackedScene" uid="uid://dvy6fplm6rmk5" path="res://fontaine.tscn" id="19_jie2m"]
+[ext_resource type="PackedScene" uid="uid://e2kxghl5s0ls" path="res://restart_button.tscn" id="20_cgra3"]
 [ext_resource type="PackedScene" uid="uid://dwvx5gl6g1ahd" path="res://death_fadein_fadout.tscn" id="22_xnm38"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ig7tw"]
@@ -352,7 +354,7 @@ position = Vector2(79, 407)
 position = Vector2(398, 304)
 
 [node name="coin" parent="." instance=ExtResource("14_8ottt")]
-position = Vector2(652, 248)
+position = Vector2(653, 297)
 
 [node name="coin2" parent="." instance=ExtResource("14_8ottt")]
 position = Vector2(1229, 306)
@@ -370,6 +372,20 @@ offset_left = 197.0
 offset_top = 62.0
 offset_right = 197.0
 offset_bottom = 62.0
+
+[node name="restart_menu" parent="CanvasLayer" instance=ExtResource("19_iiuyr")]
+offset_left = 581.0
+offset_top = 136.0
+offset_right = 581.0
+offset_bottom = 136.0
+metadata/_edit_lock_ = true
+
+[node name="restart panel" parent="CanvasLayer" instance=ExtResource("20_cgra3")]
+offset_left = 1088.0
+offset_top = 65.0
+offset_right = 22.0
+offset_bottom = -555.0
+metadata/_edit_lock_ = true
 
 [node name="death_fadin_fadout" parent="CanvasLayer" instance=ExtResource("22_xnm38")]
 

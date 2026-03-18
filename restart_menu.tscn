@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=4 uid="uid://c5lg8i5wpujpj"]
+
+[ext_resource type="Script" uid="uid://mctnoiem0jg1" path="res://restart_menu.gd" id="1_nwq8c"]
+[ext_resource type="PackedScene" uid="uid://c1bkiqsyhlggi" path="res://ui_bakground.tscn" id="1_p6vsd"]
+[ext_resource type="FontFile" uid="uid://dk3rtw1w3qmkh" path="res://fonts/hardpixel/Hardpixel.OTF" id="2_eg8yu"]
+[ext_resource type="FontFile" uid="uid://b5p8ip8jo47wf" path="res://fonts/karma-future-font/KarmaFuture.ttf" id="3_eg8yu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6vsd"]
+bg_color = Color(0.6142051, 0.1704917, 0.18701708, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwq8c"]
+bg_color = Color(0.4264634, 0.103144534, 0.11803972, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eg8yu"]
+bg_color = Color(0.41960785, 0.33333334, 0.2784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unhnm"]
+bg_color = Color(0.29913044, 0.23301661, 0.19088557, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdjcm"]
+bg_color = Color(0.42745098, 0.101960786, 0.11764706, 1)
+
+[node name="restart_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nwq8c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -965.0
+offset_top = -350.0
+offset_right = 850.0
+offset_bottom = 686.0
+color = Color(0.045846704, 0.045846704, 0.045846704, 0.4745098)
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_p6vsd")]
+tile_map_data = PackedByteArray("AAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAADAAAAAAABAAEAAAACAAAAAAABAAEAAAABAAAAAAABAAEAAAD/////AAABAAAAAAAAAP//AAABAAAAAAAAAAAAAAABAAEAAAD//wAAAAABAAEAAAD+////AAABAAAAAAD9////AAABAAAAAAD8////AAABAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAEAAAD8/wAAAAABAAEAAAD8/wEAAAABAAEAAAD9/wEAAAABAAEAAAD9/wAAAAABAAEAAAD+/wAAAAABAAEAAAD7/wEAAAAAAAEAAAD7/wIAAAAAAAEAAAD7/wMAAAAAAAEAAAD7/wQAAAAAAAEAAAD7/wUAAAAAAAEAAAD7/wYAAAAAAAEAAAD8/wYAAAABAAEAAAD9/wYAAAABAAEAAAD+/wYAAAABAAEAAAD//wYAAAABAAEAAAAAAAYAAAABAAEAAAABAAYAAAABAAEAAAACAAYAAAABAAEAAAADAAYAAAABAAEAAAADAAUAAAABAAEAAAADAAQAAAABAAEAAAADAAMAAAABAAEAAAADAAIAAAABAAEAAAADAAEAAAABAAEAAAACAAEAAAABAAEAAAABAAEAAAABAAEAAAAAAAEAAAABAAEAAAD//wEAAAABAAEAAAD//wIAAAABAAEAAAD+/wIAAAABAAEAAAD+/wEAAAABAAEAAAD9/wIAAAABAAEAAAD9/wMAAAABAAEAAAD9/wQAAAABAAEAAAD8/wQAAAABAAEAAAD8/wMAAAABAAEAAAD8/wIAAAABAAEAAAD8/wUAAAABAAEAAAAAAAIAAAABAAEAAAABAAIAAAABAAEAAAACAAIAAAABAAEAAAACAAMAAAABAAEAAAACAAQAAAABAAEAAAACAAUAAAABAAEAAAABAAUAAAABAAEAAAAAAAUAAAABAAEAAAD//wUAAAABAAEAAAD+/wUAAAABAAEAAAD9/wUAAAABAAEAAAD+/wQAAAABAAEAAAD+/wMAAAABAAEAAAD//wMAAAABAAEAAAAAAAMAAAABAAEAAAABAAMAAAABAAEAAAABAAQAAAABAAEAAAAAAAQAAAABAAEAAAD//wQAAAABAAEAAAADAAcAAAABAAEAAAADAAgAAAABAAEAAAADAAkAAAABAAEAAAADAAoAAAABAAEAAAADAAsAAAABAAEAAAADAAwAAAABAAIAAAACAAwAAAABAAIAAAABAAwAAAABAAIAAAAAAAwAAAABAAIAAAD//wwAAAABAAIAAAD+/wwAAAABAAIAAAD9/wwAAAABAAIAAAD8/wwAAAABAAIAAAD7/wwAAAAAAAIAAAD7/wsAAAAAAAEAAAD7/woAAAAAAAEAAAD7/wkAAAAAAAEAAAD7/wgAAAAAAAEAAAD7/wcAAAAAAAEAAAD8/wcAAAABAAEAAAD8/wgAAAABAAEAAAD8/wkAAAABAAEAAAD8/woAAAABAAEAAAD8/wsAAAABAAEAAAD9/wsAAAABAAEAAAD9/woAAAABAAEAAAD9/wkAAAABAAEAAAD9/wgAAAABAAEAAAD9/wcAAAABAAEAAAD+/wcAAAABAAEAAAD+/wgAAAABAAEAAAD+/wkAAAABAAEAAAD+/woAAAABAAEAAAD+/wsAAAABAAEAAAD//wsAAAABAAEAAAD//woAAAABAAEAAAD//wkAAAABAAEAAAD//wgAAAABAAEAAAD//wcAAAABAAEAAAAAAAcAAAABAAEAAAAAAAgAAAABAAEAAAAAAAkAAAABAAEAAAABAAoAAAABAAEAAAABAAsAAAABAAEAAAAAAAsAAAABAAEAAAAAAAoAAAABAAEAAAABAAkAAAABAAEAAAABAAgAAAABAAEAAAABAAcAAAABAAEAAAACAAcAAAABAAEAAAACAAgAAAABAAEAAAACAAkAAAABAAEAAAACAAoAAAABAAEAAAACAAsAAAABAAEAAAAEAP//AAACAAAAAAAEAAAAAAACAAEAAAAEAAEAAAACAAEAAAAEAAIAAAACAAEAAAAEAAMAAAACAAEAAAAEAAQAAAACAAEAAAAEAAYAAAACAAEAAAAEAAcAAAACAAEAAAAEAAUAAAACAAEAAAAEAAgAAAACAAEAAAAEAAkAAAACAAEAAAAEAAoAAAACAAEAAAAEAAsAAAACAAEAAAAEAAwAAAACAAIAAAA=")
+
+[node name="Respawn" type="Button" parent="."]
+layout_mode = 0
+offset_left = -134.0
+offset_top = 249.0
+offset_right = 135.0
+offset_bottom = 309.0
+theme_override_fonts/font = ExtResource("2_eg8yu")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_p6vsd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nwq8c")
+text = "Respawn (-1 HP)"
+
+[node name="Cancel" type="Button" parent="."]
+layout_mode = 0
+offset_left = -134.0
+offset_top = 175.0
+offset_right = 135.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("2_eg8yu")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_eg8yu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_unhnm")
+text = "--> Cancel <--"
+
+[node name="return_to_meu" type="Button" parent="."]
+layout_mode = 0
+offset_left = -134.0
+offset_top = 323.0
+offset_right = 135.0
+offset_bottom = 383.0
+theme_override_fonts/font = ExtResource("2_eg8yu")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_p6vsd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pdjcm")
+text = "Return to menu"
+
+[node name="Park Runner" type="Label" parent="."]
+layout_mode = 0
+offset_left = -132.0
+offset_top = -12.0
+offset_right = 656.0
+offset_bottom = 153.0
+scale = Vector2(0.3388559, 0.3388559)
+tooltip_text = "Start in your current level"
+theme_override_colors/font_color = Color(0.39, 0.29874, 0.2379, 1)
+theme_override_fonts/font = ExtResource("3_eg8yu")
+theme_override_font_sizes/font_size = 126
+text = "Park Runner"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -159.0
+offset_top = 58.0
+offset_right = 158.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0.41960785, 0.33333334, 0.2784314, 1)
+theme_override_fonts/font = ExtResource("2_eg8yu")
+text = "Are you sure you want 
+to retry / exit
+Note that this can't 
+be undone."
+horizontal_alignment = 1
+
+[connection signal="button_down" from="Respawn" to="." method="_on_respawn_button_down"]
+[connection signal="button_down" from="Cancel" to="." method="_on_cancel_button_down"]
+[connection signal="button_down" from="return_to_meu" to="." method="_on_return_to_meu_button_down"]

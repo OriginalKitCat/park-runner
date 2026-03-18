@@ -6,6 +6,7 @@ var somerandomtimer : Timer;
 func _ready():
 	transparency_value = 0
 	modulate = Color(1, 1, 1, 0)
+	visible = false
 
 	Data.deathfade_begin = false
 	Data.deathfade_end = false
@@ -16,9 +17,11 @@ func _physics_process(delta: float) -> void:
 		transparency_value -= delta * 2
 	elif Data.deathfade_begin and transparency_value < 1:
 		transparency_value += delta * 2
+		visible  = true
 		Data.playermovement = false
 	if Data.deathfade_end and transparency_value <= 0.0:
 		Data.deathfade_end = false
+		visible = false
 		transparency_value = 0.0
 	if Data.deathfade_begin and transparency_value >= 1:
 		Data.deathfade_begin = false;
@@ -36,3 +39,4 @@ func _physics_process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	Data.deathfade_end = true
 	Data.playermovement = true
+	

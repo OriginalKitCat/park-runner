@@ -1,9 +1,29 @@
-[gd_scene load_steps=10 format=3 uid="uid://dv7pepqhg23i6"]
+[gd_scene load_steps=30 format=3 uid="uid://dv7pepqhg23i6"]
 
 [ext_resource type="Script" uid="uid://bfqfe7xsfe4mu" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Script" uid="uid://csu4wuv21qh4n" path="res://camera_2d.gd" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://dda6vtd4ovvix" path="res://images/running_player/Unbenanntes_Projekt-1.png" id="4_dx0e4"]
 [ext_resource type="Texture2D" uid="uid://b2rrde6v6abna" path="res://images/player_waiting.PNG" id="4_hqtel"]
 [ext_resource type="PackedScene" uid="uid://blqmrowsgw03y" path="res://background_music.tscn" id="4_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bbpuya1gwm5bm" path="res://images/running_player/Unbenanntes_Projekt-2.png" id="5_jm5j8"]
+[ext_resource type="Texture2D" uid="uid://ddmj3ilejxku8" path="res://images/running_player/Unbenanntes_Projekt-3.png" id="6_7hik5"]
+[ext_resource type="Texture2D" uid="uid://dk86dtfsbgus2" path="res://images/running_player/Unbenanntes_Projekt-4.png" id="7_qtqh7"]
+[ext_resource type="Texture2D" uid="uid://ulsonhewjkuu" path="res://images/running_player/Unbenanntes_Projekt-5.png" id="8_2wuci"]
+[ext_resource type="Texture2D" uid="uid://cmfoxugeiq137" path="res://images/running_player/Unbenanntes_Projekt-6.png" id="9_iruf7"]
+[ext_resource type="Texture2D" uid="uid://bflw8rsv6odm8" path="res://images/running_player/Unbenanntes_Projekt-7.png" id="10_j5n4i"]
+[ext_resource type="Texture2D" uid="uid://bncmgiotn6rml" path="res://images/running_player/Unbenanntes_Projekt-8.png" id="11_634y6"]
+[ext_resource type="Texture2D" uid="uid://r5yllr0dhvin" path="res://images/running_player/Unbenanntes_Projekt-9.png" id="12_efrwb"]
+[ext_resource type="Texture2D" uid="uid://dlckqm7jodvni" path="res://images/running_player/Unbenanntes_Projekt-10.png" id="13_hiqhm"]
+[ext_resource type="Texture2D" uid="uid://82t0mppb1ln4" path="res://images/running_player/Unbenanntes_Projekt-11.png" id="14_tkwlq"]
+[ext_resource type="Texture2D" uid="uid://dkn7oiigrnxt" path="res://images/running_player/Unbenanntes_Projekt-12.png" id="15_hl5qd"]
+[ext_resource type="Texture2D" uid="uid://ccf10ep5nfyq4" path="res://images/running_player/Unbenanntes_Projekt-13.png" id="16_ek41f"]
+[ext_resource type="Texture2D" uid="uid://da4mm0of0yrv8" path="res://images/running_player/Unbenanntes_Projekt-14.png" id="17_khis8"]
+[ext_resource type="Texture2D" uid="uid://0tsqddma8551" path="res://images/running_player/Unbenanntes_Projekt-15.png" id="18_b88wv"]
+[ext_resource type="Texture2D" uid="uid://cig8kywpelctk" path="res://images/running_player/Unbenanntes_Projekt-16.png" id="19_pgbbb"]
+[ext_resource type="Texture2D" uid="uid://ch6bs5s7cy5gf" path="res://images/running_player/Unbenanntes_Projekt-17.png" id="20_331ug"]
+[ext_resource type="Texture2D" uid="uid://go4aw8fbm5iw" path="res://images/running_player/Unbenanntes_Projekt-18.png" id="21_ny14h"]
+[ext_resource type="Texture2D" uid="uid://dtsib8ufl4cqx" path="res://images/running_player/Unbenanntes_Projekt-19.png" id="22_ibah8"]
+[ext_resource type="Texture2D" uid="uid://cg7b286xgrvqg" path="res://images/running_player/Unbenanntes_Projekt-20.png" id="23_3iwfv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
 size = Vector2(21, 5)
@@ -11,43 +31,92 @@ size = Vector2(21, 5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(13, 53)
 
-[sub_resource type="Animation" id="Animation_hqtel"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwsg1"]
+atlas = ExtResource("4_hqtel")
+region = Rect2(0, 0, 32, 64)
 
-[sub_resource type="Animation" id="Animation_i3pqv"]
-resource_name = "standing"
-loop_mode = 1
-step = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xqrm"]
+atlas = ExtResource("4_hqtel")
+region = Rect2(32, 0, 32, 64)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_sweqy"]
-_data = {
-&"RESET": SubResource("Animation_hqtel"),
-&"standing": SubResource("Animation_i3pqv")
-}
+[sub_resource type="SpriteFrames" id="SpriteFrames_bfour"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_3iwfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ibah8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ny14h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_331ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pgbbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_b88wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_khis8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ek41f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hl5qd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tkwlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hiqhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_efrwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_634y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j5n4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iruf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2wuci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qtqh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7hik5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jm5j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dx0e4")
+}],
+"loop": true,
+"name": &"running",
+"speed": 36.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwsg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xqrm")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 1.0
+}]
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
@@ -63,20 +132,14 @@ shape = SubResource("RectangleShape2D_i3pqv")
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_i3pqv")
 
-[node name="PlayerWaiting" type="Sprite2D" parent="."]
-position = Vector2(6, -21)
-texture = ExtResource("4_hqtel")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../PlayerWaiting")
-libraries = {
-&"": SubResource("AnimationLibrary_sweqy")
-}
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="BackgroundMusic" parent="." instance=ExtResource("4_sweqy")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7, -22)
+sprite_frames = SubResource("SpriteFrames_bfour")
+animation = &"running"
+frame_progress = 0.015390174
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

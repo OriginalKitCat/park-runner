@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://d325f5i0nuqbl"]
+[gd_scene load_steps=4 format=4 uid="uid://yscl8u5iu2vl"]
 
-[ext_resource type="PackedScene" uid="uid://c1bkiqsyhlggi" path="res://ui_bakground.tscn" id="1_37he8"]
-[ext_resource type="Texture2D" uid="uid://cb0qv53565krn" path="res://images/coin_icon.PNG" id="2_lup5j"]
+[ext_resource type="PackedScene" uid="uid://c1bkiqsyhlggi" path="res://ui_bakground.tscn" id="1_py5ku"]
+[ext_resource type="Texture2D" uid="uid://cb0qv53565krn" path="res://images/coin_icon.PNG" id="2_yyuyv"]
 
 [sub_resource type="FontVariation" id="FontVariation_37he8"]
 
@@ -15,7 +15,7 @@ offset_bottom = -620.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TileMapLayer" parent="." instance=ExtResource("1_37he8")]
+[node name="TileMapLayer" parent="." instance=ExtResource("1_py5ku")]
 tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAD//wAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAABAAAAAAABAAIAAAACAAAAAAACAAIAAAACAP//AAACAAAAAAA=")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -24,7 +24,7 @@ offset_left = -15.0
 offset_top = -15.0
 offset_right = 16.0
 offset_bottom = 16.0
-texture = ExtResource("2_lup5j")
+texture = ExtResource("2_yyuyv")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

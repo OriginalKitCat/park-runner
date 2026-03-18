@@ -5,12 +5,14 @@ var somerandomtimer : Timer;
 
 func _ready():
 	transparency_value = 0
+	visible = false
 	modulate = Color(1, 1, 1, 0)
 
 	Data.lastfadout = false
 
 func _physics_process(delta: float) -> void:
 	if Data.lastfadout and transparency_value < 1:
+		visible = true;
 		$Label.text = Data.labeltext
 		transparency_value += delta * 2
 		Data.playermovement = false
